@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     
-    const planet = document.getElementById('planet').value.trim();
+    const planet = "Moon"; // Planet is now fixed as Moon
     const rashi = document.getElementById('rashi').value.trim();
     const degree = document.getElementById('degree').value.trim();
     
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
       resultHTML += `<p><strong>Pada:</strong> ${result.pada}</p>`;
       
       if (result.suggestedFirstLetter) {
-        resultHTML += `<p><strong>Suggested First Letter:</strong> ${result.suggestedFirstLetter}</p>`;
+        resultHTML += `<p><strong>Suggested First Letter:</strong> <span class="highlight-result">${result.suggestedFirstLetter}</span></p>`;
       }
       
       resultHTML += `</div>`;

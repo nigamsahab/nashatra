@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Nakshtra Calculation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .container {
+        background: rgba(17, 24, 39, 0.7);
+        border-radius: 1rem;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 1.75rem;
+        width: 100%;
+        max-width: 480px;
+        max-height: 95vh;
+      }
+      .title {
+        color: #60a5fa;
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+      }
+      .description {
+        color: #d1d5db;
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+      .form-row {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+      }
+      .form-group {
+        flex: 1;
+        margin-bottom: 1.25rem;
+      }
+      .form-label {
+        display: block;
+        color: #9ca3af;
+        font-size: 0.75rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+      .form-input {
+        width: 100%;
+        padding: 0.625rem 0.75rem;
+        background-color: rgba(31, 41, 55, 0.8);
+        border: 1px solid rgba(75, 85, 99, 0.4);
+        border-radius: 0.375rem;
+        color: #e5e7eb;
+        font-size: 0.875rem;
+        transition: all 0.3s ease;
+      }
+      .form-input:focus {
+        outline: none;
+        border-color: #60a5fa;
+        box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+      }
+      .form-input::placeholder {
+        color: #6b7280;
+      }
+      .btn {
+        width: 100%;
+        padding: 0.625rem 0.75rem;
+        background-color: #3b82f6;
+        color: white;
+        font-weight: 600;
+        font-size: 0.875rem;
+        border: none;
+        border-radius: 0.375rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 0.75rem;
+      }
+      .btn:hover {
+        background-color: #2563eb;
+      }
+      .result-box {
+        margin-top: 1.5rem;
+        padding: 0.875rem;
+        background-color: rgba(31, 41, 55, 0.6);
+        border: 1px solid rgba(75, 85, 99, 0.3);
+        border-radius: 0.375rem;
+        color: #9ca3af;
+        text-align: center;
+        font-style: italic;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Nakshtra Calculation</h1>
+      <p class="description">
+        To know the first letter of the child's name according to the zodiac and constellation, fill in the moon's zodiac and degree below. To know the constellation and constellation lord of any planet, fill in the details below.
+      </p>
+      <form>
+        <div class="form-group">
+          <label for="planet" class="form-label">Planet</label>
+          <input type="text" id="planet" name="planet" placeholder="Enter planet name" class="form-input" />
+        </div>
+        <div class="form-row">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="rashi" class="form-label">Rashi</label>
+            <input type="text" id="rashi" name="rashi" placeholder="Enter rashi" class="form-input" />
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="degree" class="form-label">Degree</label>
+            <input type="text" id="degree" name="degree" placeholder="Enter degree" class="form-input" />
+          </div>
+        </div>
+        <button type="submit" class="btn">
+          Calculate
+        </button>
+      </form>
+      <div class="result-box">
+        Calculation result will appear here.
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
